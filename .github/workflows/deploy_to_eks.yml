@@ -1,9 +1,6 @@
 name: Deploy to EKS
 
-on:
- 
-  push:
-    branches: [ master ]
+on: workflow_dispatch
 
 env:
   EKS_CLUSTER_NAME: sysdig-voting-app
