@@ -29,6 +29,7 @@ jobs:
       run: aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --region $AWS_REGION
 
     - name: Deploy to EKS
+      uses: actions-hub/kubectl@1.30.0
       run: |
         kubectl create -f k8s-specifications/
 
