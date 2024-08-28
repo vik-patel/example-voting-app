@@ -31,4 +31,6 @@ jobs:
     - name: Deploy to EKS
 
       run: |
-        kubectl delete deployment redis
+        kubectl apply -f k8s-specifications/redis-deployment.yaml
+        kubectl apply -f k8s-specifications/redis-service.yaml
+
